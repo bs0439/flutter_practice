@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -67,7 +68,20 @@ class _TopPart extends StatelessWidget {
             ),
             IconButton(
                 iconSize: 60,
-                onPressed: () {},
+                onPressed: () {
+                  showCupertinoDialog(
+                      barrierDismissible: true,
+                      context: context,
+                      builder: (BuildContext context) {
+                        return Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Container(
+                            color: Colors.white,
+                            height: 300,
+                          ),
+                        );
+                      });
+                },
                 icon: Icon(
                   Icons.favorite,
                   color: Colors.red,
