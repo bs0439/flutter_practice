@@ -8,3 +8,7 @@ void main() {
     ),
   );
 }
+
+
+
+// TO_CHAR(TO_DATE(a.date, YYMMDD HH24)) as date
